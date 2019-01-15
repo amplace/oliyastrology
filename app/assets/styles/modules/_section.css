@@ -1,0 +1,35 @@
+.section {
+    position: relative;
+    /* size */
+    min-height: 100vh;
+    /* content align */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background */
+    background-color: rgba($myDark, 0.6);
+    /* spacing */
+    padding: 50px 10%;
+
+    @mixin atLarge {
+        padding: 50px 20px;
+    }
+
+    &--dark {
+        /* background */
+        background-color: rgba(0, 0, 0, 0.6);
+        /* font */
+        color: $myPink;
+    }
+
+    &--left {
+        text-align: left;
+    }
+
+
+    &__content {
+        position: relative;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}

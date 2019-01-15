@@ -1,0 +1,19 @@
+/* _grid.css */
+
+.row {
+    width: 100%;
+    @mixin clearfix;
+}
+
+.col {
+    width: 100%;
+    float: left;
+
+    &-md {
+        &-4 {
+            @mixin atMedium {
+                max-width: 33%;
+            }
+        }
+    }
+}

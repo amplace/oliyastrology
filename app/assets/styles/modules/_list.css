@@ -1,0 +1,42 @@
+.list {
+    position: relative;
+    list-style: none;
+    margin-left: 0;
+    padding: 1.2rem;
+
+    @mixin atSmall {
+        padding-left: 1.6rem;
+    }
+
+    @mixin atMedium {
+        padding-left: 1.9rem;
+    }
+
+    @mixin atLarge {
+        padding-left: 2.2rem;
+    }
+
+    &--v:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+    }
+
+    &--one:before {
+        content: "❶";
+        position: absolute;
+        left: -5px;
+    }
+
+    &--two:before {
+        content: "❷";
+        position: absolute;
+        left: -5px;
+    }
+
+    &--three:before {
+        content: "❸";
+        position: absolute;
+        left: -5px;
+    }
+}

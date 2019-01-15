@@ -528,10 +528,10 @@ select { /* 1 */
     }a {
     color: inherit;
     text-decoration: none;
-}.info {
+}.section {
     position: relative;
     /* size */
-    height: 100vh;
+    min-height: 100vh;
     /* content align */
     display: -webkit-box;
     display: -webkit-flex;
@@ -549,14 +549,54 @@ select { /* 1 */
         -ms-flex-pack: center;
             justify-content: center;
     /* background */
-    background-color: rgba(0, 0, 0, 0.6);
-    /* font */
-    color: #a48b9f;
-}.info__content {
+    background-color: rgba(16,9,50, 0.6);
+    /* spacing */
+    padding: 50px 10%;
+}@media (min-width: 1200px) {.section {
+        padding: 50px 20px
+}
+    }.section--dark {
+        /* background */
+        background-color: rgba(0, 0, 0, 0.6);
+        /* font */
+        color: #a48b9f;
+    }.section--left {
+        text-align: left;
+    }.section__content {
         position: relative;
         max-width: 960px;
         margin: 0 auto;
-    }.row {
+    }.list {
+    position: relative;
+    list-style: none;
+    margin-left: 0;
+    padding: 1.2rem;
+}@media (min-width: 600px) {.list {
+        padding-left: 1.6rem
+}
+    }@media (min-width: 960px) {.list {
+        padding-left: 1.9rem
+}
+    }@media (min-width: 1200px) {.list {
+        padding-left: 2.2rem
+}
+    }.list--v:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+    }.list--one:before {
+        content: "❶";
+        position: absolute;
+        left: -5px;
+    }.list--two:before {
+        content: "❷";
+        position: absolute;
+        left: -5px;
+    }.list--three:before {
+        content: "❸";
+        position: absolute;
+        left: -5px;
+    }/* _grid.css */.row {
     width: 100%;
 }.row::after {
         content: "";
