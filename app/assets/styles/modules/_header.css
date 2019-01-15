@@ -1,0 +1,39 @@
+.header {
+    position: relative;
+    /* size */
+    height: 100vh;
+    /* content align */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__content {
+        text-shadow:
+            -0.5px -0.5px 0 $myDark,
+            0.5px -0.5px 0 $myDark,
+            -0.5px 0.5px 0 $myDark,
+            0.5px 0.5px 0 $myDark;
+        margin-top: 0;
+        padding: 10px 10%;
+
+        @mixin atLarge {
+            padding: 10px 30%;
+        }
+    }
+}
+
+.moon {
+    width: auto;
+    animation: spin 20s infinite linear;
+    z-index: 2;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

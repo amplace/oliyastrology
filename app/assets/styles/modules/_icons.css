@@ -1,0 +1,31 @@
+.drop-down {
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    animation: drop 1.5s infinite;
+
+    &-container {
+        height: 40px;
+        position: relative;
+    }
+}
+
+@keyframes drop {
+    0% {
+        transform: rotate(-45deg) translate(-12px, 0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(-45deg) translate(-32px, 20px);
+        opacity: 0;
+    }
+}
