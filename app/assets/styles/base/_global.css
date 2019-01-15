@@ -1,0 +1,26 @@
+/* _global.css */
+/* google font import */
+@import url('https://fonts.googleapis.com/css?family=Gabriela|Tenor+Sans');
+
+/* include padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+}
+
+html {}
+
+body {
+    position: relative;
+    /* no spacing */
+    padding: 0;
+    margin: 0;
+    /* size */
+    height: 100vh;
+    width: 100%;
+    /* font */
+    color: $myOrange;
+    font-family: 'Tenor Sans', sans-serif;
+    text-align: center;
+    /* background */
+    background-color: black;
+}
