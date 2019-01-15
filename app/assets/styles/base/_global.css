@@ -22,5 +22,45 @@ body {
     font-family: 'Tenor Sans', sans-serif;
     text-align: center;
     /* background */
-    background-color: black;
+    background: $myDark url('../../assets/img/space-small.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    @mixin atSmall {
+        background-image: url('../../assets/img/space-medium.jpg');
+    }
+
+    @mixin atMedium {
+        background-image: url('../../assets/img/space-large.jpg');
+    }
+
+    &:before {
+        content: "";
+        /* position */
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* size */
+        height: 100vh;
+        width: 100%;
+        /* background */
+        background-color: rgba(0, 0, 0, 0.3);
+        /* stars pulse animation */
+        animation: pulse 4s infinite;
+
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
